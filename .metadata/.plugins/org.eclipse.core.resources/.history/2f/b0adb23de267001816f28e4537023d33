@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+ 
+<!-- <body class = "img-fluid"  background = "assets/banner1.jpg" background-repeat = "no-repeat"> -->
+<body>
+<div class="bg">
+
+<nav class="navbar navbar-inverse">
+ <a class="navbar-brand" href="#">MedCure</a>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+
+     
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a routerLink = "home">Home</a></li>
+        <li><a routerLink="login">login</a></li>
+  		<li><a routerLink="register">Register</a></li>
+		<li><a routerLink="filter">Admin Login</a></li>
+		<li><a routerLink="signin">Donate/receive</a></li>
+
+      
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a routerLink="admin"><span class="glyphicon glyphicon-log-in"></span> Admin</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+ <div class="container">
+  <p> </p>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+        <!-- Wrapper for slides -->
+
+    
+
+  
+<div class="container text-center">    
+  <h3>Choose Your Enjoyment</h3><br>
+
+  
+
+  
+</div><br>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+</div>
+</div>
+</body>
+</html>
+<router-outlet></router-outlet>

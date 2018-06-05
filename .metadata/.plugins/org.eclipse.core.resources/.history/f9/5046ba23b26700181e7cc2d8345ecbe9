@@ -1,0 +1,35 @@
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { RouterModule, Routes, Router } from '@angular/router';
+
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
+})
+export class LoginComponent implements OnInit {
+  data;
+  constructor(private http: HttpClient,private router:Router) { }
+
+  ngOnInit() {
+  }
+  onClick(data) {
+   this.http.post('Restfulapi/webresources/myresource/login', {
+     name: data.name,
+     password: data.password
+   })
+   .subscribe(
+      (res: any) => {
+        this.data = res;
+        alert(this.data);
+        if(this.data === 'successful'){
+          this.router.navigate(['/customer/']);
+        }
+      },
+     err => {
+     console.log('error occured');
+   }
+  );
+  }
+
+}

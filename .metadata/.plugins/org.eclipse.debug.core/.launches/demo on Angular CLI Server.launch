@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.genuitec.eclipse.modernweb.angular2.core.angularCliProjectServerLaunch">
+    <stringAttribute key="browser.chrome.customArguments" value=""/>
+    <booleanAttribute key="browser.chrome.disableCache" value="true"/>
+    <booleanAttribute key="browser.chrome.enableHotSync" value="true"/>
+    <booleanAttribute key="browser.chrome.enableSourceMaps" value="true"/>
+    <booleanAttribute key="browser.chrome.showConsole" value="false"/>
+    <booleanAttribute key="browser.chrome.showProcessConsole" value="false"/>
+    <stringAttribute key="chrome.exe" value="/opt/google/chrome/google-chrome"/>
+    <stringAttribute key="jsAppBrowserLaunchingDelegateId" value="com.genuitec.eclipse.javascript.debug.chrome.webAppBrowser"/>
+    <booleanAttribute key="ng-lr-enabled" value="true"/>
+    <stringAttribute key="ng-port" value="4200"/>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+        <listEntry value="/demo"/>
+    </listAttribute>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+        <listEntry value="4"/>
+    </listAttribute>
+    <stringAttribute key="server-type" value="NODEJS"/>
+</launchConfiguration>

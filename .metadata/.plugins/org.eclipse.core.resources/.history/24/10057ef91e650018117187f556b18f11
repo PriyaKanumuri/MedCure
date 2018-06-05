@@ -1,0 +1,36 @@
+
+package com.ts.rest.Restfulapi;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.ws.rs.Consumes;
+import javax.ws.rs.FormParam;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.MediaType;
+
+
+
+@Path("/myoperation")
+public class MyOperation {
+     
+    @POST
+	@Path("/donate")
+	@Consumes(MediaType.APPLICATION_JSON)
+	public void addDonate(Donate donate) throws IOException {
+		System.out.println("Hi! save called..."+person.getEmail()+" "+person.getName());
+		PersonDAO p = new PersonDAO();
+		if(p.addPerson(person)==1) {
+			System.out.println("successful");
+		}
+		else
+			System.out.println("failure");   
+    }
+    
+}
+

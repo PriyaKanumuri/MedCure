@@ -1,0 +1,8 @@
+
+<form #form4= "ngForm">
+Disease name: <input type="text" name="dis_name" ><br><br>
+Medicine name: <input type="text" name="med_name" ><br><br>
+<input type = "button" value="click" (click)="onclick(form4.value)"/><br><br>
+
+</form>
+

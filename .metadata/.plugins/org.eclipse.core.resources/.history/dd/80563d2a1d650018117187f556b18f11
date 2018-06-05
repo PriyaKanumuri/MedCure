@@ -1,0 +1,9 @@
+package com.ts.rest.Restfulapi;
+
+public class MyOperation {
+
+	public MyOperation() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

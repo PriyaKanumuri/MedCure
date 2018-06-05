@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<body>
+		<div class="container">
+			<div class="row main">
+				<div class="main-login main-center">
+				<div id="login-box">
+	
+			<h1 class="logo-caption"><span class="tweak">Admin L</span>ogin</h1>
+		</div>
+				<form #form4= "ngForm">
+					<div class="form-group">
+					<label for="name" class="cols-sm-2 control-label">Your Name</label>
+					<div class="cols-sm-10">
+					<div class="input-group">
+					<input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"  ngModel/>
+					</div>
+					</div>
+					</div>
+					<div class="form-group">
+					<label for="password" class="cols-sm-2 control-label">Password</label>
+					<div class="cols-sm-10">
+					<div class="input-group">
+					<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"required ngModel/><br />
+					</div>
+					</div>
+					</div>
+					<div class="form-group ">
+					<input  type="button" id="button"  value="click" (click)="onClick(form4.value)">
+					</div>
+						
+					</form>
+				
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,9 @@
+127.0.0.1 - - [23/May/2018:14:14:39 +0530] "GET / HTTP/1.1" 404 994
+127.0.0.1 - - [23/May/2018:14:43:18 +0530] "GET / HTTP/1.1" 404 994
+127.0.0.1 - - [23/May/2018:14:43:20 +0530] "GET /Restfulapi/index.jsp HTTP/1.1" 200 233
+127.0.0.1 - - [23/May/2018:14:43:20 +0530] "GET /favicon.ico HTTP/1.1" 404 1016
+127.0.0.1 - - [23/May/2018:14:43:21 +0530] "GET /Restfulapi/webresources/myresource HTTP/1.1" 200 36
+127.0.0.1 - - [23/May/2018:14:51:28 +0530] "GET /Restfulapi/webresources/myresource HTTP/1.1" 200 36
+127.0.0.1 - - [23/May/2018:14:57:49 +0530] "GET /test/men.html HTTP/1.1" 404 1020
+127.0.0.1 - - [23/May/2018:14:57:49 +0530] "GET /favicon.ico HTTP/1.1" 404 1016
+127.0.0.1 - - [23/May/2018:14:57:49 +0530] "GET /favicon.ico HTTP/1.1" 404 1016

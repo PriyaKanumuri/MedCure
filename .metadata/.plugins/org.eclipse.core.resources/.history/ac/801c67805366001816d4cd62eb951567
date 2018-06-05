@@ -1,0 +1,18 @@
+<button (click)="onclick($event)">click</button>
+  
+   
+      {{ data.donor_name }}
+      {{data.patient_name}}
+      {{ data.med_type }}
+      {{ data.med_pic }}
+      {{ data.quantity }}
+   <ul>
+    <li *ngFor="let a of data.receive">
+      {{ a.donor_name }}
+      {{a.patient_name}}
+      {{ a.med_type }}
+      {{ a.med_pic }}
+      {{ a.quantity }}
+    </li>
+  </ul>
+ 

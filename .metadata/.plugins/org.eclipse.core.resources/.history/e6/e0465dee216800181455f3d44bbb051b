@@ -1,0 +1,26 @@
+
+<html>
+
+<body>
+	<div class="container">
+			<div class="row main">
+				<div class="main-login main-center">
+
+	    <h1>Hello, Customer!</h1>
+  </div>
+  
+  
+        <button type="button"  [routerLink]="['/donor/']" class="btn success ">Donate</button>    
+
+
+        <button type="button" [routerLink]="['/receive/']" class="btn success">Receive</button>    
+
+               
+        <button type="button" class="btn btn-labeled btn-default">
+                <span class="btn-label-action"><i class="glyphicon glyphicon-new-window"></i></span>Logout</button>    
+    
+    <router-outlet></router-outlet>
+</div>
+</div>
+</body>
+</html>

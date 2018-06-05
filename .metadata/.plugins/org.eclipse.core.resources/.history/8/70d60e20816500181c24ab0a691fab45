@@ -1,0 +1,23 @@
+
+import { DemoService } from '../demo.service';
+import { Component, OnInit } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+@Component({
+  selector: 'app-receive',
+  templateUrl: './receive.component.html',
+  styleUrls: ['./receive.component.css']
+})
+export class ReceiveComponent implements OnInit {
+    receive : Receive;
+  sub: any;
+
+  constructor(private demo: DemoService) { }
+
+  ngOnInit() {
+      this.sub = this.route.params.subscribe(params => { dis_name;
+      this.demo.get(dis_name,med_name).subscribe(p => this.receive = p);
+    });
+  }
+  
+
+}

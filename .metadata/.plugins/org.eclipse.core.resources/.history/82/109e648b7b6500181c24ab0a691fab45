@@ -1,0 +1,22 @@
+import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+import { Observable } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class DemoService {
+  private baseUrl = '/Restfulapi/webresources/myresource';
+  constructor(private http: Http) {
+  }
+
+  get(dis_name: number): Observable<Donate> {
+    alert(dis_name);
+    const donate$ = this.http
+      .get(`${this.baseUrl}/receive/${dis_name}`)
+    return donate$;
+  }
+  function1(){
+    alert('functon2 from datatservice');
+  }
+}

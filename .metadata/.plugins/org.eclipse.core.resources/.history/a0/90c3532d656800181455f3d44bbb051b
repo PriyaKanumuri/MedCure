@@ -1,0 +1,9 @@
+package com.ts.rest.Restfulapi;
+
+public class Admin {
+
+	public Admin() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

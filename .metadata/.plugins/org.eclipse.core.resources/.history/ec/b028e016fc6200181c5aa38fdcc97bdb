@@ -1,0 +1,21 @@
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+@Component({
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
+})
+export class RegisterComponent implements OnInit {
+  constructor(private http: HttpClient) {  }
+
+  ngOnInit() {
+  }
+ onClick(data) {
+   this.http.post('Restfulapi/webresources/myresource/register1', {
+     email: data.email,
+     name: data.name,
+   })
+  }
+}

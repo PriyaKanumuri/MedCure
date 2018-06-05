@@ -1,0 +1,82 @@
+<html>
+<head>
+
+</head>
+<body>
+<form #form3= "ngForm">
+  
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Disease Name</label>
+      <input type="text" class="form-control" name="dis_name" placeholder="Disease Name" >
+    </div>
+    <br>
+    <div class="form-group col-md-6">
+      <label>Medicine Name</label>
+      <input type = "text" name="med_name" placeholder="Medicine Name" ngModel/>
+  </div>  
+<br>   <!--  
+    <div class="btn-group">
+    <button type="button" class="btn btn-secondary">Type Of Medicine</button>
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+      <a class="dropdown-item" href="#">Tablet</a>
+      <a class="dropdown-item" href="#">Liquid</a>
+      <a class="dropdown-item" href="#">Capsules</a>
+      <a class="dropdown-item" href="#">Topical medicines(Creams, Ointments or Lotions)</a>
+      <a class="dropdown-item" href="#">Suppositories</a>
+      <a class="dropdown-item" href="#">Drops</a>
+      <a class="dropdown-item" href="#">Inhalers</a>
+      <a class="dropdown-item" href="#">Injections</a>
+      <a class="dropdown-item" href="#">Implants or patches</a>
+      <a class="dropdown-item" href="#">Buccal or sublingual tablets or liquids</a>
+   <!--  <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>--> 
+   <!--  </div>   
+    <div class="custom-file">
+    <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+    <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+    <div class="invalid-feedback">File not selected</div>-->
+    </div> 
+     <br>
+      <label>MedicinePicture </label>
+      <input type="text" class="form-control"  name="med_pic" placeholder="Medicine Picture">
+  <br>
+    <br>
+      <label>Medicine Type </label>
+      <input type="text" class="form-control"  name="med_type" placeholder="Medicine type">
+  <br>
+  
+  <br>
+  
+      <label>Expiry Date</label>
+ 
+     
+    <input type = "text" name="exp_date" placeholder="Date" ngModel/>
+<br>
+      <label>Dosage</label>
+      <input type="text" class="form-control" name="dosage"  placeholder="ml/gm">
+  <br>
+  <br>
+  <label>Quantity</label>
+    <input type = "text" name="quantity" placeholder="Quantity" ngModel/>
+      
+    
+    <br> 
+    
+  
+      <!-- <div class="input-group date" data-provide="datepicker">
+    <input type="text" class="form-control">
+    <div class="input-group-addon">
+        <span class="glyphicon glyphicon-th"></span>
+    </div>
+</div>
+</div>
+-->
+    
+    <input type = "button" value="click" (click)="onClick(form3.value)"/>
+    </form>
+</body>
+</html>

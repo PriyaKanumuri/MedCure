@@ -1,0 +1,32 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-adminlogin',
+  templateUrl: './adminlogin.component.html',
+  styleUrls: ['./adminlogin.component.css']
+})
+export class AdminloginComponent implements OnInit {
+
+  constructorprivate http: HttpClient, private router: Router) { }
+
+  ngOnInit() {
+  }
+onclick(data) {
+   this.http.post('Restfulapi/webresources/myresource/login', {
+     name: data.name,
+     password: data.password
+   })
+   .subscribe(
+      (res: any) => {
+        this.data = res;
+        alert(this.data);
+         if (this.data = 'successful') {
+          this.router.navigate(['/customer/']);
+        }
+      },
+     err => {
+     console.log('error occured');
+   }
+  );
+  }
+}

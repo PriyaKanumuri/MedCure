@@ -1,0 +1,49 @@
+package com.ts.rest.Restfulapi;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class LoginDAO {
+	ResultSet rs;
+
+	public boolean addLogin(Login login) {
+		String name = login.getName();
+		String password = login.getPassword();
+	    String sql = "select * from register1 where name='" + login.getName() + "' and password='" + login.getPassword()+ "'";
+
+		try {
+			System.out.println(login.getName()+" "+login.getPassword());
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/person", "root","vasu1972");
+			PreparedStatement pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, name);
+			pstmt.setString(2, password);
+			rs = pstmt.executeQuery();
+			con.close();
+            while (rs.next()) {
+                name = rs.getString("name");
+                password = rs.getString("password");
+            } //end while
+            if (password.equals(password)) {
+                //do something
+                return true;
+                rs.close();
+            }
+		} catch(SQLException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return 0;
+	}
+	public LoginDAO() {
+		
+		super();
+		// TODO Auto-generated constructor stub
+	}
+}
+

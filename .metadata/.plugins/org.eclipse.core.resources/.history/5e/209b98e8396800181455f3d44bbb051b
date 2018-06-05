@@ -1,0 +1,9 @@
+<form #form3= "ngForm">
+ Disease Name    :  <input type = "text" name="dis_name" ngModel/><br />
+Medicine Name :  <input type = "text" name="med_name" ngModel/><br />
+Medicine Type  :  <input type = "text" name="med_type" ngModel/><br />
+Expiry Date: <input type = "date" name="exp_date" ngModel/><br />
+Dosage : <input type = "text" name="dosage" ngModel/><br /> 
+Quantity: <input type = "number" name="quantity" ngModel/><br /> 
+<input type = "button" value="click" (click)="onclick(form3.value)"/><br><br>
+</form>

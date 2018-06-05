@@ -1,0 +1,60 @@
+
+Required Quantity   :  <input type = "text" name="req_quantity" ngModel/><br />
+<input type = "button" value="click" (click)="onclick(form5.value)"/><br><br>
+</form>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<body>
+		<div class="container">
+			<div class="row main">
+				<div class="main-login main-center">
+				<form #form6= "ngForm">
+					<div class="form-group">
+					<label for="name" class="cols-sm-2 control-label">Patient Name</label>
+					<div class="cols-sm-10">
+					<div class="input-group">
+					<input type="text" class="form-control" name="patient_name" id="patient_name"  placeholder="Enter patient Name" required ngModel/>
+					</div>
+					</div>
+					</div>
+					<div class="form-group">
+					<label for="password" class="cols-sm-2 control-label">Patient Phone</label>
+					<div class="cols-sm-10">
+					<div class="input-group">
+					<input type="text" class="form-control" name="patient_phone" id="patient_phone"  placeholder="Enter Patient Phone Number"required ngModel/><br />
+					</div>
+					</div>
+					</div>
+					<div class="form-group">
+					<label for="email" class="cols-sm-2 control-label">Patient Address</label>
+					<div class="cols-sm-10">
+					<div class="input-group">
+					<input type="text" class="form-control" name="patient_address" id="patient_address"  placeholder="Enter Patient Address"required ngModel/>
+					</div>
+					</div>
+				    </div>
+					<div class="form-group">
+					<label for="number" class="cols-sm-2 control-label">Required Quantity</label>
+					<div class="cols-sm-10">
+					<div class="input-group">
+					<input type="date" class="form-control" name="req_quantity" id="req_quantity"  placeholder="Enter Required Quantity"  required ngModel/><br />
+					</div>
+					</div>
+		     		</div>
+					
+					<div class="form-group ">
+					<input  type="button" id="button"  value="click" (click)="onclick(form6.value)">
+					</div>
+						
+					</form>
+				
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>
+

@@ -1,0 +1,44 @@
+package com.ts.rest.Restfulapi;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class DonatehistoryDAO {
+	public  List<Donate> getAllHistory() throws ClassNotFoundException, SQLException {
+		String sql = "select m.dis_name,m.med_name,m.med_type,m.med_pic,m.exp_date,m.dosage,m.quantity from donate m";
+		System.out.println("in Mobiles dao......");
+
+		List<Donate> mlist = new ArrayList<Donate>();
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/person", "root","vasu1972");
+
+		PreparedStatement ps = con.prepareStatement(sql);
+		Donate temp = new Donate();
+
+		ResultSet rs = ps.executeQuery();
+		while (rs.next()) {
+
+			temp.setDis_name(rs.getString(1));
+			temp.setMed_name(rs.getString(2));
+			temp.setMed_type(rs.getString(3));
+			temp.setMed_pic(rs.getString(4));
+			temp.setExp_date(rs.getString(5));
+			temp.setDosage(rs.getString(6));
+			temp.setQuantity(rs.getString(7));
+			mlist.add(temp);
+			System.out.println("in Mobiles dao......");
+			System.out.println(mlist);
+		}
+		return mlist;
+	}
+
+	public DonatehistoryDAO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+}

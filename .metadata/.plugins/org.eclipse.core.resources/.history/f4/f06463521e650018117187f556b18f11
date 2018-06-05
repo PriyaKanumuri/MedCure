@@ -1,0 +1,21 @@
+package com.ts.rest.Restfulapi;
+
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+public class Donate {
+	private String dis_name;
+	private String med_name;
+	private String med_pic;
+	private String med_type;
+	private String expiry_date;
+	private String dosage;
+	private String quantity;
+	
+
+	public Donate() {
+		super();
+	}
+
+}

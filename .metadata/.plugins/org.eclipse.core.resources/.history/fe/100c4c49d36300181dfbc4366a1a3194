@@ -1,0 +1,6 @@
+    
+    <form #form1= "ngForm">
+    <input type = "text" name="email" ngModel/>
+    <input type = "text" name="name" ngModel/>
+    <input type = "button" value="click" (click)="onClick(form1.value)"/>
+    </form>

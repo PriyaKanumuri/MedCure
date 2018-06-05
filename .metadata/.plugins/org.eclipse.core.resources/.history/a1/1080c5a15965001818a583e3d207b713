@@ -1,0 +1,30 @@
+package com.ts.rest.Restfulapi;
+
+public class Receive {
+	private String diseaseName;
+	private String medicineName;
+	public Receive() {
+		super();
+	}
+	public Receive(String diseaseName,String medicineName){
+		super();
+		this.diseaseName = diseaseName;
+		this.medicineName = medicineName;
+	}
+	public String getDiseaseName() {
+		return diseaseName;
+	}
+	public void setDiseaseName(String diseaseName) {
+		this.diseaseName = diseaseName;
+	}
+	public String getMedicineName() {
+		return medicineName;
+	}
+	public void setMedicineName(String medicineName) {
+		this.medicineName = medicineName;
+	}
+	
+}
+	}
+
+}

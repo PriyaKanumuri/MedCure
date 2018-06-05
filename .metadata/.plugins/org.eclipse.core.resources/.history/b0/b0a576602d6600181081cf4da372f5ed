@@ -1,0 +1,21 @@
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-donor-history',
+  templateUrl: './donor-history.component.html',
+  styleUrls: ['./donor-history.component.css']
+})
+export class DonorHistoryComponent implements OnInit {
+
+  constructor(private http: HttpClient) { }
+  data;
+  ngOnInit() {
+  }
+  onclick(event) {
+    console.log(event);
+    alert('button clicked');
+    this.http.get('Restfulapi/webresources/myresource/donorhistory').subscribe(res => this.data = res);
+  }
+
+}

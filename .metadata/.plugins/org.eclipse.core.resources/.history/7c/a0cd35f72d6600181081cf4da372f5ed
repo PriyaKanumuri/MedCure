@@ -1,0 +1,12 @@
+<button (click)="onclick($event)">click</button>
+  <ul>
+    <li *ngFor="let a of data">
+      {{ a.dis_name }}
+      {{a.med_name}}
+      {{ a.med_type }}
+      {{ a.med_pic }}
+      {{ a.exp_date }}
+      {{ a.dosage }}
+      {{ a.quantity }}
+    </li>
+  </ul>

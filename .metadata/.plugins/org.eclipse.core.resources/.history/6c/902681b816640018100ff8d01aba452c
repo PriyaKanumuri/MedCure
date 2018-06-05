@@ -1,0 +1,53 @@
+package com.ts.rest.Restfulapi;
+
+import java.sql.*;
+
+public class PersonDAO{
+	int noOfRowsAffected;
+	public int addPerson(Person person){
+		String name = person.getName();
+		String password = person.getPassword();
+		String email = person.getEmail();
+		String phone = person.getPhone();
+		String address= person.getAddress();
+		String aadhar = person.getAadhar();
+		
+		String sql = "insert into register1(name,password,email,phone,address,aadhar) values(?,?,?,?,?,?)";
+
+		try {
+			System.out.println(person.getEmail()+" "+person.getName());
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/person", "root","vasu1972");
+			PreparedStatement pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, name);
+			pstmt.setString(2, password);
+			pstmt.setString(3, email);
+			pstmt.setString(4, phone);
+			pstmt.setString(5, address);
+			pstmt.setString(6, aadhar);
+			noOfRowsAffected = pstmt.executeUpdate();
+			con.close();
+		} catch(SQLException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		if(noOfRowsAffected > 0)
+			return 1;
+		return 0;
+	}
+	private static final long serialVersionUID = 1L;
+       
+    public PersonDAO() {
+        super();
+    
+    }
+
+	public void display(Person person) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+}

@@ -1,0 +1,28 @@
+ng g component my --spec false 
+ng g component calci 
+npm start
+ng g component login --spec false 
+ng serve --port 4201
+ng serve --proxy-config proxy.config.json
+npm start
+ng serve --port 4201
+npm start
+ng g component register --spec false 
+ng g component customer --spec false 
+ng g service demo --spec false 
+npm start
+ng g component donate 
+ng g component admin 
+ng g component receive --spec false 
+ng g component donor_history --spec false 
+npm start
+ng g component stock --spec false 
+npm start
+ng g component messageus 
+ng g component home 
+ng g component receive 
+ng g component adminlogin --spec false 
+ng g component receivedetails --spec false 
+npm start
+ng g component home 
+ng g component logout --spec false 

@@ -1,0 +1,9 @@
+package com.ts.rest.Restfulapi;
+
+public class ReceiveDAO {
+
+	public ReceiveDAO() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

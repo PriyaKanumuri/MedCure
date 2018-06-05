@@ -1,0 +1,138 @@
+
+package com.ts.rest.Restfulapi;
+
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.ws.rs.Consumes;
+import javax.ws.rs.FormParam;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.MediaType;
+
+@Path("/myresource")
+public class MyResource {
+    
+    @GET 
+    @Produces("text/plain")
+    public String hello() {
+        return "Hi there!welcome to bvith";
+    }
+    @GET 
+    @Path("/getData")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Person> getDat() {
+        List<Person> list = new ArrayList<Person>();
+    	Person person1=new Person("pasha","pasha2","pasha@gmailcom","1324","njsccb","jhbjcgbnsd");
+    	list.add(person1);
+     	return list;
+    }
+    @GET 
+    @Path("/getData1")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Donate> getDat1() {
+        List<Donate> list = new ArrayList<Donate>();
+    	Donate donate1=new Donate("pasha","pasha2","pasha@gmailcom","njsccb","jhbjcgbnsd","cdbvd");
+    	list.add(donate1);
+     	return list;
+    }
+     
+    @POST
+	@Path("/register1")
+	@Consumes(MediaType.APPLICATION_JSON)
+	public void addPerson(Person person) throws IOException {
+		System.out.println("Hi! save called..."+person.getEmail()+" "+person.getName());
+		PersonDAO p = new PersonDAO();
+		if(p.addPerson(person)==1) {
+			System.out.println("successful");
+		}
+		else
+			System.out.println("failure");   
+    }
+    @POST
+  	@Path("/login")
+  	@Consumes(MediaType.APPLICATION_JSON)
+    public void getPerson(Person person ) throws IOException {
+  		System.out.println("Hi! save called..."+person.getName()+" "+person.getPassword());
+  		PersonDAO p = new PersonDAO();
+  		if(p.getPerson(person)==1) {
+			System.out.println("successful");
+		}
+		else
+			System.out.println("failure");   
+    }
+  	@POST
+  	@Path("/adminlogin")
+  	@Consumes(MediaType.APPLICATION_JSON)
+  	public void getAdmin(Person person ) throws IOException {
+  	   System.out.println("Hi! save called..."+person.getName()+" "+person.getPassword());
+  	   PersonDAO p = new PersonDAO();
+  	  	if(p.getPerson(person)==1) {
+  			System.out.println("successful");
+  		}
+  		else
+  			System.out.println("failure");   
+  		
+    }
+    @POST
+	@Path("/donate")
+	@Consumes(MediaType.APPLICATION_JSON)
+	public void addDonate(Donate donate) throws IOException {
+		System.out.println("Hi! save called..."+donate.getDis_name()+" "+donate.getExp_date());
+		DonateDAO p = new DonateDAO();
+		if(p.addDonate(donate)==1) {
+			System.out.println("successful");
+		}
+		else
+			System.out.println("failure");   
+    }
+    @POST
+  	@Path("/receivedetails")
+  	@Consumes(MediaType.APPLICATION_JSON)
+  	public void addDonate(Donate donate) throws IOException {
+  		System.out.println("Hi! save called..."+donate.getDis_name()+" "+donate.getExp_date());
+  		DonateDAO p = new DonateDAO();
+  		if(p.addDonate(donate)==1) {
+  			System.out.println("successful");
+  		}
+  		else
+  			System.out.println("failure");  
+    }
+    @GET
+    @Path("/receive/{dis_name}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Donate getDonate(@PathParam("dis_name") String dis_name) throws ClassNotFoundException, SQLException {
+        System.out.println("Called"+ dis_name );
+    	 return DonateDAO.getDonate(dis_name);
+    }
+    @GET
+    @Path("/donorhistory")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Donate> getAllHistory() throws  ClassNotFoundException, SQLException{
+    	System.out.println("hi in dao");
+    	DonateDAO q = new DonateDAO();
+    	List<Donate> list = new ArrayList<Donate>();
+    	list = q.getAllHistory();
+    	System.out.println(list);
+    	return list;
+   
+    }
+    @GET
+    @Path("/stock")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Receive> getTransfer() throws  ClassNotFoundException, SQLException{
+    	System.out.println("hi in dao");
+    	ReceiveDAO r = new ReceiveDAO();
+    	List<Receive> list = new ArrayList<Receive>();
+    	list = r.getTransfer();
+    	System.out.println(list);
+    	return list;
+   
+    }
+    }

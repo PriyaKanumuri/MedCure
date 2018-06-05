@@ -1,0 +1,83 @@
+package com.ts.rest.Restfulapi;
+
+import java.sql.*;
+
+public class PersonDAO{
+
+
+	public int addPerson(Person person){
+		int noOfRowsAffected=0;
+
+		String name = person.getName();
+		String password = person.getPassword();
+		String email = person.getEmail();
+		String phone = person.getPhone();
+		String address= person.getAddress();
+		String aadhar = person.getAadhar();
+		
+		String sql = "insert into register1(name,password,email,phone,address,aadhar) values(?,?,?,?,?,?)";
+
+		try {
+			System.out.println(person.getEmail()+" "+person.getName());
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/person", "root","vasu1972");
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, name);
+			ps.setString(2, password);
+			ps.setString(3, email);
+			ps.setString(4, phone);
+			ps.setString(5, address);
+			ps.setString(6, aadhar);
+			noOfRowsAffected = ps.executeUpdate();
+			con.close();
+		} catch(SQLException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		if(noOfRowsAffected==1)
+			return 1; 
+		return 0;
+	}
+       
+    public PersonDAO() {
+        super();
+    
+    }
+
+	public int getPerson(Person person) {
+		ResultSet rs;
+		String name = person.getName();
+		String password = person.getPassword();
+		String sql =  "select * from register1 where name='" + name + "' AND password='" + password + "'";
+
+		try {
+			System.out.println(person.getName()+" "+person.getPassword());
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/person", "root","vasu1972");
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, name);
+			ps.setString(2, password);
+			rs = ps.executeQuery();
+			String uname = "";
+			String uPass = "";
+            while (rs.next()) {
+                uname = rs.getString("name");
+                uPass = rs.getString("password");
+            }
+            if (uPass.equals(password)) {
+                return 1;
+            } 
+			con.close();
+		} catch(SQLException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+
+		return 0;
+	}
+}

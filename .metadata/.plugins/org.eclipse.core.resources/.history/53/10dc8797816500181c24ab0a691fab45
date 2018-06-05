@@ -1,0 +1,16 @@
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class DemoService {
+  constructor(private http: Http) {
+  }
+
+
+  }
+  function1(){
+    alert('functon2 from datatservice');
+  }
+}

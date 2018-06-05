@@ -1,0 +1,68 @@
+
+package com.ts.rest.Restfulapi;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.ws.rs.Consumes;
+import javax.ws.rs.FormParam;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.MediaType;
+
+
+/** Example resource class hosted at the URI path "/myresource"
+ */
+@Path("/myresource")
+public class MyResource {
+    
+    /** Method processing HTTP GET requests, producing "text/plain" MIME media
+     * type.
+     * @return String that will be send back as a response of type "text/plain".
+     */
+    @GET 
+    @Produces("text/plain")
+    public String hello() {
+        return "Hi there!welcome to bvith";
+    }
+    @GET 
+    @Path("/getData")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Person> getDat() {
+        List<Person> list = new ArrayList<Person>();
+    	Person person1=new Person("pasha","pasha2","pasha@gmailcom","1324","njsccb","jhbjcgbnsd");
+    	list.add(person1);
+     	return list;
+    }
+     
+    @POST
+	@Path("/register1")
+	@Consumes(MediaType.APPLICATION_JSON)
+	public void addPerson(Person person) throws IOException {
+		System.out.println("Hi! save called..."+person.getEmail()+" "+person.getName());
+		PersonDAO p = new PersonDAO();
+		if(p.addPerson(person)==1) {
+			System.out.println("successful");
+		}
+		else
+			System.out.println("failure");   
+    }
+    @POST
+  	@Path("/login")
+  	@Consumes(MediaType.APPLICATION_JSON)
+    public void getPerson(Person person ) throws IOException {
+  		System.out.println("Hi! save called..."+person.getName()+" "+person.getPassword());
+  		PersonDAO p = new PersonDAO();
+  		if(p.getPerson(person)==1) {
+			System.out.println("successful");
+		}
+		else
+			System.out.println("failure");   
+  		
+    }
+}
+

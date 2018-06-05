@@ -1,0 +1,9 @@
+package com.ts.rest.Restfulapi;
+
+public class Receivedetails {
+
+	public Receivedetails() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

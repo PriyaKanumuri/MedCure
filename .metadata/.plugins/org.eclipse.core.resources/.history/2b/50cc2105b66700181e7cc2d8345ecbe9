@@ -1,0 +1,99 @@
+<html>
+<body>
+<!-- <div class="container">
+  <img src="assets/bg-01.jpg" width="2500" height="1000">
+  </div> 
+  <div id="carouselExampleSlidesOnly" class="carousel" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item-next">
+      <img class="d-block w-100" src="assets/smile.jpeg" width="2500" height="1000" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="assets/smile1.jpeg" width="2500" height="1000" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="assets/smile2.jpg" width="2500" height="1000" alt="Third slide">
+    </div>
+ 
+ </div> </div> -->
+ <br> <br> <br> <br>
+ <br>
+<form #form1= "ngForm">
+ 
+    <div class="form-group ">
+      <input type="text" class="form-control" placeholder="Disease name" required>
+    </div> <br>
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Medicine name" required>
+    </div>
+ 
+<br>
+
+  <div class="form-group ">
+      <select id="inputTypeofMedicine" class="form-control">
+        <option selected>Type of Medicine</option>
+        <option>Tablet</option>
+        <option>Liquid</option>
+        <option>Tropical medicines(Creams, Ointments or Lotions)</option>
+        <option>Suppositories</option>
+        <option>Drops</option>
+        <option>Inhalers</option>
+        <option>Injections</option>
+        <option>Implants or patches</option>
+        <option>Buccal or sublingual tablets or liquids</option>
+        
+        
+        
+      </select>
+    </div>
+    
+    <!--  <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Type of Medicine
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-menu" href="#">Tablet</a></li>
+      <li><a href="#">Liquid</a></li>
+      <li><a href="#">Tropical medicines(Creams, Ointments or Lotions)</a></li>
+      <li><a href="#">Suppositories</a></li>
+      <li><a href="#">Drops</a></li>
+      <li><a href="#">Inhalers</a></li>
+      <li><a href="#">Injections</a></li>
+      <li><a href="#">Implants or patches</a></li>
+      <li><a href="#">Buccal or sublingual tablets or liquids</a></li>
+    </ul>
+  </div>-->
+<br>
+   <!--  <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>--> 
+   
+    <div class="custom-file">
+    <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+    <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+    <div class="invalid-feedback">File not selected</div>
+    </div>
+    <br>
+  
+ <br>
+    <div class="form-group">
+     
+      <input type="text" class="form-control" placeholder="Quantity" required>
+    </div> <br>
+   
+    <div class="form-group">
+    
+      <input type="text" class="form-control" placeholder="Dosage" required>
+    </div> <br>
+      <div class="form-group">
+    
+      <input type="text" class="form-control" placeholder="Expiry Date(dd-mm-yy)"required>
+    </div> <br>
+    
+    <input class="btn" style="width:70%; height:100%" value="Donate" (click)="onClick(form1.value)">
+<div class="input-append date form_datetime">
+    
+    <span class="add-on"><i class="icon-th"></i></span>
+</div>
+ </form>
+
+ </body>
+</html>

@@ -1,0 +1,40 @@
+package com.ts.rest.Restfulapi;
+
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+public class Person {
+private String name;
+private String password;
+private String email;
+private String phone;
+private String address;
+private String aadhar;
+public Person() {
+	super();
+}
+public Person(String email, String name) {
+	super();
+	this.email = email;
+	this.name = name;
+}
+public String getEmail() {
+	return email;
+}
+@XmlElement
+public void setEmail(String email) {
+	this.email = email;
+}
+public String getName() {
+	return name;
+}
+@XmlElement
+public void setName(String name) {
+	this.name = name;
+}
+@Override
+public String toString() {
+	return "Student [email=" + email + ", name=" + name + "]";
+}
+}

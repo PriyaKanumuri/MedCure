@@ -1,0 +1,9 @@
+package com.ts.rest.Restfulapi;
+
+public class AdminDAO {
+
+	public AdminDAO() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

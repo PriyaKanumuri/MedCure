@@ -1,0 +1,10 @@
+    
+    <form #form1= "ngForm">
+    <input type = "text" name="name" ngModel/><br />
+    <input type = "password" name="password" ngModel/><br />
+    <input type = "text" name="email" ngModel/><br />
+    <input type = "text" name="phone" ngModel/><br />
+    <textarea rows="4" cols="50" name="address"></textarea><br />
+    <input type = "text" name="aadhar" ngModel/><br />
+    <input type = "button" value="click" (click)="onClick(form1.value)"/>
+    </form>

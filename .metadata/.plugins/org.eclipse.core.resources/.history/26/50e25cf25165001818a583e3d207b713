@@ -1,0 +1,34 @@
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+@Component({
+  selector: 'app-donate',
+  templateUrl: './donate.component.html',
+  styleUrls: ['./donate.component.css']
+})
+export class DonateComponent implements OnInit {
+
+  constructor(private http: HttpClient) { }
+
+  ngOnInit() {
+  }
+ onClick(data) {
+   this.http.post('Restfulapi/webresources/myresources/donate', {
+     dis_name: data.dis_name,
+     med_name: data.med_name,
+     med_pic: data.med_pic,
+     med_type: data.med_type,
+     exp_date: data.exp_date,
+     dosage: data.dosage,
+     quantity: data.quantity
+   })
+   .subscribe(
+     (res: any) => {
+      console.log(res);
+   },
+     err => {
+     console.log('error occured');
+   }
+  );
+  }
+}

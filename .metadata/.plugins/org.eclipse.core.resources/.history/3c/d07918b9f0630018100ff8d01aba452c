@@ -1,0 +1,30 @@
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
+})
+export class LoginComponent implements OnInit {
+  data;
+  constructor(private http: HttpClient) { }
+
+  ngOnInit() {
+  }
+  onClick(data) {
+   this.http.post('Restfulapi/webresources/myresource/register1', {
+     name: data.name,
+     password: data.password
+   })
+   .subscribe(
+     (res: any) => {
+      console.log(res);
+   },
+     err => {
+     console.log('error occured');
+   }
+  );
+  }
+
+}

@@ -1,0 +1,9 @@
+package com.ts.rest.Restfulapi;
+
+public class DonatehistoryDAO {
+
+	public DonatehistoryDAO() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

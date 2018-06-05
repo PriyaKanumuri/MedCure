@@ -1,0 +1,69 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<body>
+		<div class="container">
+			<div class="row main">
+				<div class="main-login main-center">
+				<form #form2= "ngForm">
+					<div class="form-group">
+					<label for="name" class="cols-sm-2 control-label">Your Name</label>
+					<div class="cols-sm-10">
+					<div class="input-group">
+					<input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"  ngModel/>
+					</div>
+					</div>
+					</div>
+					<div class="form-group">
+					<label for="password" class="cols-sm-2 control-label">Password</label>
+					<div class="cols-sm-10">
+					<div class="input-group">
+					<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"required ngModel/><br />
+					</div>
+					</div>
+					</div>
+					<div class="form-group">
+					<label for="email" class="cols-sm-2 control-label">Your Email</label>
+					<div class="cols-sm-10">
+					<div class="input-group">
+					<input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"required ngModel/>
+					</div>
+					</div>
+				    </div>
+					<div class="form-group">
+					<label for="number" class="cols-sm-2 control-label">Phone Number</label>
+					<div class="cols-sm-10">
+					<div class="input-group">
+					<input type="text" class="form-control" name="phone" id="phone number"  placeholder="Enter 10-digit number"  required ngModel/><br />
+					</div>
+					</div>
+		     		</div>
+					<div class="form-group">
+					<label for="confirm" class="cols-sm-2 control-label">Address</label>
+					<div class="cols-sm-10">
+					<div class="input-group">
+					<input type="text" class="form-control" name="address" id="address"  placeholder="Enter 16-digit valid number"required ngModel/><br />
+					</div>
+					</div>
+					</div>
+					<div class="form-group">
+					<label for="confirm" class="cols-sm-2 control-label">Aadhar Number</label>
+					<div class="cols-sm-10">
+					<div class="input-group">
+					<input type="text" class="form-control" name="aadhar" id="aadhar"  placeholder="Enter 16-digit valid number"required ngModel/><br />
+					</div>
+					</div>
+					</div>
+					<div class="form-group ">
+					<input  type="button" id="button"  value="register" (register)="onregister(form2.value)">
+					</div>
+						
+					</form>
+				
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>

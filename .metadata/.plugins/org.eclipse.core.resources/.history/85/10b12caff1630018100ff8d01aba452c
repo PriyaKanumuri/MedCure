@@ -1,0 +1,9 @@
+package com.ts.rest.Restfulapi;
+
+public class LoginDAO {
+
+	public LoginDAO() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

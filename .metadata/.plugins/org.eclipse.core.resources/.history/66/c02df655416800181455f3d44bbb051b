@@ -1,0 +1,77 @@
+
+PhoneNumber  :  <input type = "text" name="patient_phone" ngModel/><br />
+Address   :  <input type = "text" name="patient_address" ngModel/><br />
+Required Quantity   :  <input type = "text" name="req_quantity" ngModel/><br />
+<input type = "button" value="click" (click)="onclick(form5.value)"/><br><br>
+</form>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<body>
+		<div class="container">
+			<div class="row main">
+				<div class="main-login main-center">
+				<form #form6= "ngForm">
+					<div class="form-group">
+					<label for="name" class="cols-sm-2 control-label">Patient Name</label>
+					<div class="cols-sm-10">
+					<div class="input-group">
+					<input type="text" class="form-control" name="patient_name" id="patient_name"  placeholder="Enter patient Name" required ngModel/>
+					</div>
+					</div>
+					</div>
+					<div class="form-group">
+					<label for="password" class="cols-sm-2 control-label">Patient Phone</label>
+					<div class="cols-sm-10">
+					<div class="input-group">
+					<input type="text" class="form-control" name="patient_phone" id="patient_phone"  placeholder="Enter Patient Phone Number"required ngModel/><br />
+					</div>
+					</div>
+					</div>
+					<div class="form-group">
+					<label for="email" class="cols-sm-2 control-label">Patient Address</label>
+					<div class="cols-sm-10">
+					<div class="input-group">
+					<input type="text" class="form-control" name="patient_address" id="patient_address"  placeholder="Enter your Medicine Type (Tablets/tonic)"required ngModel/>
+					</div>
+					</div>
+				    </div>
+					<div class="form-group">
+					<label for="number" class="cols-sm-2 control-label">Expiry Date</label>
+					<div class="cols-sm-10">
+					<div class="input-group">
+					<input type="date" class="form-control" name="exp_date" id="exp_date"  placeholder="Enter the Expiry date"  required ngModel/><br />
+					</div>
+					</div>
+		     		</div>
+					<div class="form-group">
+					<label for="confirm" class="cols-sm-2 control-label">Dosage</label>
+					<div class="cols-sm-10">
+					<div class="input-group">
+					<input type="text" class="form-control" name="dosage" id="dosage"  placeholder="Enter theDosage"required ngModel/><br />
+					</div>
+					</div>
+					</div>
+					<div class="form-group">
+					<label for="confirm" class="cols-sm-2 control-label">Quantity</label>
+					<div class="cols-sm-10">
+					<div class="input-group">
+					<input type="number" class="form-control" name="quantity" id="quantity"  placeholder="Enter the Quantity"required ngModel/><br />
+					</div>
+					</div>
+					</div>
+					<div class="form-group ">
+					<input  type="button" id="button"  value="click" (click)="onclick(form4.value)">
+					</div>
+						
+					</form>
+				
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>
+

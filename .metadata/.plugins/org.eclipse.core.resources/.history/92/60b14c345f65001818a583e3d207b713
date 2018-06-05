@@ -1,0 +1,33 @@
+package com.ts.rest.Restfulapi;
+import java.sql.*;
+
+public class ReceiveDAO {
+	ResultSet rs;
+	Receive p = new Receive();
+	public Receive getReceive(String dis_name,String med_name) {
+		String sql = "select * from donate where dis_name='" + dis_name + "' AND med_name='" + med_name + "'";
+		try {
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/person", "root","vasu1972"); 
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, dis_name);
+			ps.setString(2, med_name);
+			rs = ps.executeQuery();
+		
+			if(rs.next()) {
+				p.setDis_name(rs.getString(1));
+			    p.setMed_name(rs.getString(2));
+				p.setMed_type(rs.getString(3));
+				p.setMed_pic(rs.getString(4));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return p;
+	}
+
+	public ReceiveDAO() {
+		super();
+		
+	}
+
+}

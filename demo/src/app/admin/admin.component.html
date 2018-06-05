@@ -1,0 +1,48 @@
+
+<html>
+
+<body>
+	<div class="container">
+			<div class="row main">
+				<div class="main-login main-center">
+
+	    <h1>Hello, Customer!</h1>
+  
+         <div class="row">
+        <button type="button"  (click)="onclick($event)" class="btn success ">Stock Available</button>    
+	</div>
+    <div class="row">
+        <button type="button" (click)="onClick($event)" class="btn success">Transferred History</button>    
+	</div>
+    <div class="row">
+        <button type="button" [routerLink]="['/home/']" class="btn btn-labeled btn-default">
+                <span class="btn-label-action"><i class="glyphicon glyphicon-new-window"></i></span>Logout</button>    
+    </div>
+    <router-outlet></router-outlet>
+</div>
+</div>
+</div>
+  <ul>
+    <li *ngFor="let a of data.receive">
+      Donor Name : {{a.donor_name}}<br>
+      Patient Name : {{a.patient_name}}<br>
+      Medicine Name : {{a.med_name}}<br>
+      Medicine Type :{{ a.med_type }}<br>
+      Quantity : {{ a.quantity }}
+    </li>
+  </ul>
+    <ul>
+    <li *ngFor="let a of data.donate">
+ 
+      {{a.med_name}}<br>
+      {{ a.med_type }}<br>
+      {{ a.med_pic }}<br>
+      {{ a.exp_date }}<br>
+      {{ a.dosage }}<br>
+      {{ a.quantity }}
+    </li>
+  </ul>
+  
+ 
+</body>
+</html>

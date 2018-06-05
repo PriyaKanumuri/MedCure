@@ -1,0 +1,47 @@
+package com.ts.rest.Restfulapi;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class ReceivedetDAO {
+	public int addReceive(Receivedetails receivedetails){
+		int noOfRowsAffected=0;
+
+		String dis_name = receivedetails.getPatient_name();
+		String med_name = receivedetails.getPatient_phone();
+		String med_type = receivedetails.getPatient_address();
+		String exp_date= receivedetails.getReq_quantity() ;
+	
+		
+		String sql = "insert into donate(dis_name,med_name,med_type,exp_date,dosage,quantity) values(?,?,?,?,?,?)";
+
+		try {
+			System.out.println(donate.getDis_name()+" "+donate.getQuantity()+" "+donate.getExp_date());
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/person", "root","vasu1972");
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, dis_name);
+			ps.setString(2, med_name);
+			ps.setString(3, med_type);
+			ps.setString(4, exp_date);
+			ps.setString(5, dosage);
+			ps.setString(6, quantity);
+			noOfRowsAffected = ps.executeUpdate();
+			con.close();
+		} catch(SQLException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		if(noOfRowsAffected==1)
+			return 1; 
+		return 0;
+	}
+
+	
+	}
+
+}

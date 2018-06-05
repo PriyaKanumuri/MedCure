@@ -1,0 +1,34 @@
+
+<html>
+<head>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+</head>
+<body>
+<div class="container">
+	<div class="row">
+	    <h1>Hello, Admin!</h1>
+         
+	</div>
+    <div class="row">
+        <button type="button" class="btn btn-labeled btn-default">
+                <span class="btn-label-unsaved"><i class="glyphicon glyphicon-calendar"></i></span>History</button>    
+	</div>
+    <div class="row">
+        <button type="button" class="btn btn-labeled btn-default">
+                <span class="btn-label-inverse"><i class="glyphicon glyphicon-shopping-cart"></i></span>Stock</button>    
+    </div>
+    <div class="row">
+        <button type="button" class="btn btn-labeled btn-default">
+                <span class="btn-label-subaction"><i class="glyphicon glyphicon-book"></i></span>Customer Details</button>
+                 
+    </div>
+    <div class="row">
+        <button type="button" class="btn btn-labeled btn-default">
+                <span class="btn-label-action"><i class="glyphicon glyphicon-new-window"></i></span>Logout</button>    
+    </div>
+</div>
+</body>
+</html>

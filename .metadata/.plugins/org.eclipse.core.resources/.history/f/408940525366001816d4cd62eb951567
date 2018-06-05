@@ -1,0 +1,9 @@
+<button (click)="onclick($event)">click</button>
+  
+   
+      {{ data.donor_name }}
+      {{data.patient_name}}
+      {{ data.med_type }}
+      {{ data.med_pic }}
+      {{ data.quantity }}
+ 

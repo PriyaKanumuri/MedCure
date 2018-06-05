@@ -1,0 +1,16 @@
+<html>
+<body>
+<h2>Jersey RESTful Web Application!</h2>
+<p><a href="webresources/myresource">Jersey resource</a>
+<p>Visit the <a href="">Project Jersey website</a>
+for more information on Jersey!</p>
+
+<form action="webresources/myresource/register2" method="post">  
+Email:<input type="text" name="email"/><br/><br/>  
+Name:<input type="text" name="name"/><br/><br/>  
+<input type="submit" value="Submit"/> 
+</form>  
+
+
+</body>
+</html>

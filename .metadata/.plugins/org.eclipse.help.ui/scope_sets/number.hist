@@ -1,0 +1,8 @@
+#Fri Jun 01 14:41:16 IST 2018
+expression=number
+org.eclipse.help.ui.localSearch.master=true
+com.genuitec.githubSearch.master=true
+com.genuitec.stackoverflowSearch.master=true
+org.eclipse.sdk.Google.master=true
+org.eclipse.sdk.Eclipse.master=true
+__DEFAULT__=false

@@ -1,0 +1,15 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-receivedetails',
+  templateUrl: './receivedetails.component.html',
+  styleUrls: ['./receivedetails.component.css']
+})
+export class ReceivedetailsComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Customer Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+<div class="center">
+  <h1 class="display-4">Hello, Customer!</h1>
+ <!--  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>--> 
+  <hr class="my-4">
+  <!-- <p>It uses utility classes for typography and spacing to space content out within the larger container.</p> -->
+ 
+</div>
+   <div class = "text-right"><a href = "#" class="btn btn-info" role="button">Logout</a></div>
+   <div class = "text-right"><a href = "#" class="btn btn-info" role="button">Update Profile</a></div>
+   <br><br>
+  <div class="container">
+  <!-- <img src="assets/1.jpeg" class = "center" width = "500" height="750">  -->
+  <div class="center" style="text-align:center">
+ 
+
+  <button type="button" [routerLink]="['/donor/']" class="btn btn-outline-dark">Donate</button> <br> <br>
+ 
+  <button type="button" [routerLink]="['/receive/']"class="btn btn-primary btn-lg">Receive</button>
+   <router-outlet></router-outlet>
+  </div>
+
+</div>
+</div>
+
+</body>
+</html>

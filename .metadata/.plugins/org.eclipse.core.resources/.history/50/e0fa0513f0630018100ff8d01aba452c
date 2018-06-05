@@ -1,0 +1,13 @@
+package com.ts.rest.Restfulapi;
+
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+public class Login {
+
+	public Login() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

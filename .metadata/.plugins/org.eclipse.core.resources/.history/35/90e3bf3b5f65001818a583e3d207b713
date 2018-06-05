@@ -1,0 +1,14 @@
+package com.ts.rest.Restfulapi;
+import java.sql.*;
+
+public class ReceiveDAO {
+	ResultSet rs;
+	Donate p = new Donate();
+	
+
+	public ReceiveDAO() {
+		super();
+		
+	}
+
+}

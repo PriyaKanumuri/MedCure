@@ -1,0 +1,49 @@
+package com.ts.rest.Restfulapi;
+
+public class Receive {
+		private String donor_name;
+		private String patient_name;
+		private String med_name;
+		private String med_type;
+		private String quantity;
+		public Receive(String donor_name,String patient_name,String med_name,String med_type,String quantity){
+				super();
+				this.donor_name = donor_name;
+				this.patient_name = patient_name;
+				this.med_name = med_name;
+				this.med_type = med_type;
+				this.quantity = quantity;
+			}
+		public String getDonor_name() {
+				return donor_name;
+			}
+		public void setDonor_name(String donor_name) {
+				this.donor_name = donor_name;
+			}
+		public String getPatient_name() {
+				return patient_name;
+			}
+		public void setPatient_name(String patient_name) {
+				this.patient_name = patient_name;
+			}
+		public String getMed_name() {
+				return med_name;
+			}
+		public void setMed_name(String med_name) {
+				this.med_name = med_name;
+			}
+		public String getMed_type() {
+				return med_type;
+			}
+		public void setMed_type(String med_type) {
+				this.med_type = med_type;
+			}
+		public String getQuantity() {
+				return quantity;
+			}
+		public void setQuantity(String quantity) {
+				this.quantity = quantity;
+			}
+	
+
+}

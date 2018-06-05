@@ -1,0 +1,5 @@
+<form #form1= "ngForm">
+ Name    :  <input type = "text" name="name" ngModel/><br />
+Password :  <input type = "text" name="password" ngModel/><br />
+<input type = "button" value="click" (click)="onclick(form1.value)"/><br><br>
+</form>

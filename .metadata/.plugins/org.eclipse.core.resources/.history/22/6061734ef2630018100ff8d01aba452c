@@ -1,0 +1,18 @@
+package com.ts.rest.Restfulapi;
+
+public class LoginDAO {
+
+	public LoginDAO() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public int addLogin(Login login) {
+		String name = login.getName();
+		String password = login.getPassword();
+	    String sql = "select * from register where name='" + login.getName() + "' and password='" + login.getPassword()+ "'";
+
+
+		return 0;
+	}
+
+}

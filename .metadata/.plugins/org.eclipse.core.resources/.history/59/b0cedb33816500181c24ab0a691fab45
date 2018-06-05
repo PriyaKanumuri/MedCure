@@ -1,0 +1,17 @@
+
+import { DemoService } from '../demo.service';
+import { Component, OnInit } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+@Component({
+  selector: 'app-receive',
+  templateUrl: './receive.component.html',
+  styleUrls: ['./receive.component.css']
+})
+export class ReceiveComponent implements OnInit {
+
+  constructor(private demo: DemoService) { }
+
+  ngOnInit() {
+  }
+
+}

@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+/home/ujwala/Desktop/summer/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+1103077005.index
+2597169815.index
+2777909550.index
+1219513894.index
+1924484980.index
+3646778850.index
+589688950.index
